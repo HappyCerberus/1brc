@@ -1,0 +1,40 @@
+cmake_minimum_required(VERSION 3.27)
+project(1brc CXX)
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+if (CMAKE_BUILD_TYPE STREQUAL "Debug")
+    add_compile_options(-pedantic -Wall -Wextra -O1 -march=native -fno-omit-frame-pointer)
+endif()
+if (CMAKE_BUILD_TYPE STREQUAL "Release")
+    add_compile_options(-pedantic -Wall -Wextra -O3 -march=native -g0 -DNDEBUG -fomit-frame-pointer)
+endif()
+if (CMAKE_BUILD_TYPE STREQUAL "RelWithDebInfo")
+    add_compile_options(-pedantic -Wall -Wextra -O3 -march=native -fno-omit-frame-pointer -ggdb3)
+endif()
+
+add_executable(01_baseline 01_baseline.cpp)
+add_executable(02_mmap 02_mmap.cpp)
+add_executable(03_copies 03_copies.cpp)
+add_executable(04_refactor 04_refactor.cpp)
+add_executable(05_fixed_point 05_fixed_point.cpp)
+add_executable(06_custom_hash 06_custom_hash.cpp)
+add_executable(07_better_parsing 07_better_parsing.cpp)
+add_executable(08_chunks 08_chunks.cpp)
+target_link_libraries(08_chunks pthread)
+add_executable(09_dynamic_chunks 09_dynamic_chunks.cpp)
+target_link_libraries(09_dynamic_chunks pthread)
+
+# Microbenchmarks
+find_package(benchmark REQUIRED)
+
+add_executable(bench_parse_int bench_parse_int.cpp)
+set_source_files_properties(bench_parse_int.cpp PROPERTIES COMPILE_FLAGS "-mllvm -align-all-functions=5")
+target_link_libraries(bench_parse_int benchmark::benchmark)
+
+add_executable(bench_parse_together bench_parse_together.cpp)
+set_source_files_properties(bench_parse_together.cpp PROPERTIES COMPILE_FLAGS "-mllvm -align-all-functions=5")
+target_link_libraries(bench_parse_together benchmark::benchmark)

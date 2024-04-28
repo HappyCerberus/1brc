@@ -1,0 +1,72 @@
+Port-Gentil;33.3
+Hanga Roa;9.9
+Budapest;8.5
+Oranjestad;15.4
+Tel Aviv;28.3
+Kyiv;19.3
+La Ceiba;22.4
+Rostov-on-Don;2.6
+Stockholm;0.7
+Niigata;48.2
+Ürümqi;9.9
+Lake Tekapo;9.3
+Chicago;13.6
+Bamako;40.9
+Alice Springs;30.3
+Karonga;43.0
+Dili;24.3
+La Paz;22.0
+Vancouver;27.1
+Alexandra;13.8
+Flores,  Petén;12.1
+Makassar;26.0
+Willemstad;37.7
+Mumbai;19.2
+Flores,  Petén;22.0
+Kankan;36.4
+Durban;26.4
+Tabora;10.9
+Maputo;27.6
+Marseille;20.3
+Bishkek;9.7
+Alice Springs;24.9
+Skopje;5.6
+Vientiane;37.4
+Sokoto;11.7
+Houston;20.1
+Rabat;17.6
+Belize City;28.9
+Columbus;7.3
+Conakry;16.7
+Xi'an;-10.3
+Antananarivo;18.9
+Athens;38.0
+Cairns;37.5
+Tel Aviv;19.5
+San Salvador;25.2
+Alexandra;11.3
+La Ceiba;17.1
+Nairobi;9.4
+Edmonton;8.7
+Mango;26.0
+Valletta;4.8
+Kunming;9.2
+Hat Yai;24.7
+Istanbul;5.0
+Naha;6.4
+Monterrey;9.8
+Sapporo;2.2
+Bouaké;38.9
+Fukuoka;5.9
+Hamburg;21.9
+Madrid;22.6
+Anchorage;-5.5
+Guatemala City;29.4
+Marrakesh;16.8
+Memphis;8.9
+Berlin;2.1
+Napoli;37.8
+Algiers;15.3
+St. Louis;10.7
+San Jose;28.9
+Tucson;-11.2

@@ -1,0 +1,6 @@
+[submodule "1brc"]
+	path = 1brc
+	url = https://github.com/gunnarmorling/1brc
+[submodule "unordered"]
+	path = unordered
+	url = https://github.com/boostorg/unordered.git
