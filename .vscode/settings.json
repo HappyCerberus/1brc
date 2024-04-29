@@ -1,0 +1,7 @@
+{
+    "clangd.arguments": [
+        "--enable-config",
+    ],
+    "editor.formatOnSave": true,
+    "cmake.sourceDirectory": "${workspaceFolder}/src"
+}

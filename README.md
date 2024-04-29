@@ -1,6 +1,6 @@
-# 1brc
-The One Billion Row Challenge using C++
+# Optimizing C++ code to run 87x faster: The One Billion Row Challenge
 
+This is a companion repository for the [https://open.substack.com/pub/simontoth/p/daily-bite-of-c-optimizing-code-to?r=1g4l8a&utm_campaign=post&utm_medium=web](Daily bit(e) of C++ #474: Optimizing code to run 87x faster).
 
 ## Generating input
 
@@ -17,3 +17,5 @@ popd
 mv 1brc/measurements.txt .
 mv 1brc/golden_output.txt .
 ```
+
+If you want to also test against a random input, you can use the `create_measurements3.sh` instead.
