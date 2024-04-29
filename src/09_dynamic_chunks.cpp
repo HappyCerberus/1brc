@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <cstdint>
+#include <cstring>
 #include <fcntl.h>
 #include <filesystem>
 #include <iomanip>
@@ -158,9 +159,9 @@ struct DB {
     }
 
     // Keys
-    std::array<std::string, UINT16_MAX> keys_;
+    std::array<std::string, UINT16_MAX + 1> keys_;
     // Values
-    std::array<Record, UINT16_MAX> values_;
+    std::array<Record, UINT16_MAX + 1> values_;
     // Record of used indices (needed for output)
     std::vector<size_t> filled_;
 };
@@ -206,6 +207,21 @@ Measurement parse(std::span<const char>::iterator &iter) {
     }
     result.name = {begin, iter.base()};
     ++iter;
+
+    result.value = parse_int_table(iter);
+
+    return result;
+}
+
+// A more generic version that works on a wide range of inputs but isn't as fast
+Measurement parse_v2(std::span<const char>::iterator &iter) {
+    Measurement result;
+
+    const char *begin = iter.base();
+    const char *end = strchr(begin, ';');
+    result.name = {begin, end};
+    result.hash = std::hash<std::string_view>{}(result.name);
+    iter += end - begin + 1;
 
     result.value = parse_int_table(iter);
 
