@@ -1,6 +1,6 @@
 # Optimizing C++ code to run 87x faster: The One Billion Row Challenge
 
-This is a companion repository for the [https://open.substack.com/pub/simontoth/p/daily-bite-of-c-optimizing-code-to?r=1g4l8a&utm_campaign=post&utm_medium=web](Daily bit(e) of C++ #474: Optimizing code to run 87x faster).
+This is a companion repository for the [Daily bit(e) of C++ #474: Optimizing code to run 87x faster](https://open.substack.com/pub/simontoth/p/daily-bite-of-c-optimizing-code-to?r=1g4l8a&utm_campaign=post&utm_medium=web).
 
 ## Generating input
 
